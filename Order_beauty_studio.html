@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>預約_Beauty_Studio</title>
+  <link rel="icon" href="./icon/beauty_studio_icon.png">
+  <link rel="stylesheet" href="./CSS/beauty_studio.css">
+  <link rel="stylesheet" href="./CSS/bootstrap_css/bootstrap.css">
+  <script src="./js/bootstrap-js/bootstrap.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <style>
+    body {
+      background-image: url(./icon/order.bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(249, 227, 227);">
+      <div>
+        <img src="./icon/beauty_studio_icon.png" class="d-block" style="width: 50px; margin:0 10px;">
+      </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Ü Beauty</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style=" align-items: center;">
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link" href="./Face_beauty_studio.html">Face</a>
+            </li>
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link" href="./Body_beauty_studio.html">Body</a>
+            </li>
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link" href="./Hand_beauty_studio.html">Hand</a>
+            </li>
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link" href="./portfolio_beauty_studio.html">作品集</a>
+            </li>
+            <li class="nav-item me-2" style="font-size: larger;">
+              <a class="nav-link" href="./care_beauty_studio.html">護理</a>
+            </li>
+          </ul>
+          <form class="d-flex me-1">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mb-2 mb-lg-0" style=" align-items: center;">
+                <li class="nav-item me-2" style="font-size: larger;">
+                  <a class="nav-link" href="./Order_beauty_studio.html">預約</a>
+                </li>
+                <a href="./Order_beauty_studio.html" class="me-2">
+                  <img src="./icon/order.icon.png" width="45px">
+                </a>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div style="background:linear-gradient(rgb(225, 217, 202), rgb(248, 246, 246), rgb(225, 217, 202));">
+        <h3 class="container pt-2" style="font-family: 'M PLUS Rounded 1c';color: brown;">預約須知</h3>
+        <ul class="container p-2 myOrderList" style="list-style-type: circle;">
+          <li>填寫預約表單不代表預約成功，美容師將於 2 個工作天內與您聯繫確認預約狀況，視預約狀況為顧客安排時間。</li>
+          <li>若在 2 天內無聯繫，建議直接來電預約，尚祈 見諒。</li>
+          <li>本表僅接受 2 天後的預約時間，若有不便還請多多包涵。</li>
+          <li>如有其他問題，請 直撥 <a href="tel:+886-900123123" class="myA">0900-123-123</a></li>
+        </ul>
+      </div>
+      <div class="container mainBg pb-5">
+        <h2 style="display: flex; justify-content: center; font-weight: bold;color: rgb(126, 119, 88);" class="pt-5">
+          預約表單</h2>
+        <form class="allFron">
+          <div class="mt-3">
+            <label for="myName" class="form-label myForm p-2">姓名</label>
+            <input type="text" class="form-control  is-invalid " id="myName" placeholder="請輸入中文名字" required>
+          </div>
+          <div class="mt-3">
+            <label for="myEmail" class="form-label myForm p-2">Email</label>
+            <input type="email" class="form-control  is-invalid" id="myEmail" placeholder="abc@gmail.com" required>
+          </div>
+          <div class="mt-3">
+            <label for="myPhone" class="form-label myForm p-2">手機</label>
+            <input type="text" class="form-control  is-invalid" id="myPhone" pattern="[0-9]{4}-[0-9]{6}"
+              placeholder="0912-345678" required>
+          </div>
+          <div class="mt-3">
+            <label for="myOrder" class="myOrder myForm p-2">預約項目</label>
+            <select class="form-select is-invalid mt-2" id="myOrder" required>
+              <option selected disabled>請選擇課程</option>
+              <optgroup label="臉部">
+                <option>臉部基礎保養</option>
+                <option>臉部基礎保養(加強保養)</option>
+                <option>微妝感霧眉</option>
+                <option>仿真感飄眉</option>
+                <option>霧眉補色</option>
+                <option>美睫</option>
+                <option>睫毛卸除</option>
+                <option>無框水潤唇</option>
+              </optgroup>
+              <optgroup label="身體">
+                <option>基礎課程(60分鐘)</option>
+                <option>進階課程(90分鐘)</option>
+              </optgroup>
+              <optgroup label="指甲">
+                <option>基礎保養</option>
+                <option>光療(含基礎保養)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="mt-3">
+            <label for="myDate" class="form-label myForm p-2">選擇日期</label>
+            <input type="date" class="form-control  is-invalid" id="myDate" value="2023-06-28" min="2023-06-28"
+              required>
+          </div>
+
+          <div class="mt-3 ">
+            <label for="myAM" class="form-label myForm p-2">時段&nbsp;(&nbsp;如未選擇將由美容師安排&nbsp;)</label>
+            <div class="myCheck">
+              <input type="radio" name="myTime" id="myAM">
+              <label for="myAM" class="me-5">上午時段(09:00~12:00)</label>
+              <br>
+              <input type="radio" name="myTime" id="myPM">
+              <label for="myPM">下午時段(14:00~18:00)</label>
+            </div>
+          </div>
+          <div class="mt-3">
+            <label for="myDiscount" class="myForm p-2">優惠選項</label>
+            <select class="form-select" id="myDiscount" required>
+              <option selected disabled>請選擇優惠方案</option>
+              <option>團體優惠&nbsp;(&nbsp;請備註介紹人資料&nbsp;)</option>
+              <option>學生優惠&nbsp;(&nbsp;請於來店時攜帶相關證明文件&nbsp;)</option>
+            </select>
+          </div>
+          <div class="mt-3">
+            <label for="myRemark" class="form-label myForm p-2">備註&nbsp;(&nbsp;限50字&nbsp;)<br>
+              <textarea id="myRemark" class="mt-2" cols="30" rows="4" maxlength="50"
+                placeholder="備註相關資料(如藥物過敏、介紹人資料等)"></textarea>
+            </label>
+          </div>
+          <div class="mt-3 form-check">
+            <div class="myCheck">
+              <input type="checkbox" class="form-check-input" id="check1" required>
+              <label class="form-check-label" for="check1">本人已閱讀並同意
+                <a href="#" id="myContentLink" class="img-fluid figure-img" data-bs-toggle="modal"
+                  data-bs-target="#myModalContent">隱私權條款及個人資料告知聲明書</a>
+              </label>
+            </div>
+          </div>
+          <div id="myModalContent" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" style="font-family: 標楷體; color: rgb(47, 122, 97);">隱私權條款及個人資料告知聲明書</h3>
+                </div>
+                <div class="modal-body">
+                  <h4 style="color: rgb(95, 150, 196);">資料收集與使用</h4>
+                  <p>於本網站線上預約服務，須請您提供包括姓名及聯絡方式(手機、Email)等個人基本資料。</p>
+                  <p>預約服務時，您已同意將上述之個人資料提供予本店服務之需要；您得自由選擇提供個人資料，若您選擇不提供個人資料或是提供不完全或不實時，本店將無法為您預約相關服務。</p>
+                  <h4 style="color: rgb(95, 150, 196);">資料保密</h4>
+                  <p>我們保證將您的個人資料保密，並僅在必要情況下與相關人員共享。</p>
+
+                  <h4 style="color: rgb(95, 150, 196);">資料安全</h4>
+                  <p>我們將採取合理的安全措施來保護您的個人資料免受未經授權的存取或洩露。</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 form-check">
+            <div class="myCheck">
+              <input type="checkbox" class="form-check-input" id="check2" required>
+              <label class="form-check-label" for="check2">本人已確定詳閱
+                <a href="#" id="contentList" class="img-fluid figure-img" data-bs-toggle="modal"
+                  data-bs-target="#myModalList">相關注意事項</a>
+              </label>
+            </div>
+          </div>
+          <div id="myModalList" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered ">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" style="font-family: 標楷體; color: rgb(47, 122, 97);">相關注意事項</h3>
+                </div>
+                <div class="modal-body">
+                  <h4 style="color: rgb(95, 150, 196);">霧眉</h4>
+                  <ol>
+                    <li>霧眉前一週注意加強臉部保濕</li>
+                    <li>盡量避免熬夜，並擁有6~8小時的充足睡眠，因熬夜容易影響肌膚的狀態與穩定度</li>
+                    <li>為了保持眉毛周圍的肌膚清潔乾淨，霧眉前建議不用上妝，直接來店即可</li>
+                    <li>剛做完醫美的人，肌膚仍然處於虛弱、敏感的狀態，所以建議等身體恢復之後再霧眉</li>
+                  </ol>
+                  <h4 style="color: rgb(95, 150, 196);">美睫</h4>
+                  <ol>
+                    <li>美睫前不要攝取咖啡因</li>
+                    <li>美睫前不要上眼妝</li>
+                    <li>前一日儘量早點睡覺，充足的睡眠可以讓您的眼睛充分休息，降低美睫膠水熏眼的風險</li>
+                  </ol>
+                  <h4 style="color: rgb(95, 150, 196);">霧唇</h4>
+                  <ol>
+                    <li>霧唇前請先做好唇部保濕</li>
+                    <li>充足的睡眠</li>
+                  </ol>
+                  <h4 class="mt-2" style="color: rgb(161, 54, 54);">以下情形不適合施作以上產品，供大家參考</h4>
+                  <ol>
+                    <li>孕婦或正處於哺乳期的孕媽咪</li>
+                    <li>眉毛部位患有傷口、皮膚疾病等</li>
+                    <li>有蟹足腫、皮膚癌、糖尿病、任何血液疾病</li>
+                  </ol>
+
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="myCheck mt-3">
+            <input type="checkbox" class="form-check-input" id="check3" required>
+            <label class="form-check-label" for="check3">本人已確定詳閱並同意遵守上方預約須知</label>
+          </div>
+          <button type="submit" class="btn btn-outline-success btn-lg d-grid mx-auto mt-5"
+            onclick="mySubmit()">送出</button>
+        </form>
+      </div>
+
+    </main>
+
+    <footer style="background-color: rgb(219, 181, 181);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-1 col-lg-1 me-2">
+            <img class="mt-1" src="./icon/beauty_studio_button_icon.png" style="width: 100px;">
+          </div>
+          <div class="col-md-12 col-lg-4 ">
+            <div>
+              <span class="myForm mb-2">聯絡資訊</span><br>
+              <span class="myNews">電子信箱&nbsp;:&nbsp;<a href="mailto:Ubeauty@gmail.com"
+                  class="myA">Ubeauty@gmail.com</a></span><br>
+              <span class="myNews">電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;:
+                <a href="tel:+886-900123123" class="myA">0900-123-123</a>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <div>
+              <span class="myForm mb-5">官方網站</span><br>
+              <a href="https://instagram.com/b.t_beauty_studio?igshid=MzRlODBiNWFlZA==" style="text-decoration:none;"
+                target="_blank">
+                <img class="me-2" src="./icon/ig.png" width="50vh">
+              </a>
+              <a href="https://www.facebook.com/coo202020" style="text-decoration:none;" target="_blank">
+                <img class="me-2" src="./icon/fb.png" width="50vh">
+              </a>
+              <a href="https://linevoom.line.me/user/_deFE9miby316SKtQ3al8o4aOkzIoAANTkDt_nlo"
+                style="text-decoration:none;" target="_blank">
+                <img src="./icon/line2.png" width="55vh">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="bottomTop">
+        <img src="./icon/top2.png" width="30vh">
+      </a>
+    </footer>
+
+    <script>
+
+      function mySubmit() {
+        var name = (`姓名：${document.getElementById("myName").value}`);
+        var mail = (`信箱：${document.getElementById("myEmail").value}`);
+        var phone = (`手機：${document.getElementById("myPhone").value}`);
+        var order = (`預約項目：${document.getElementById("myOrder").value}`);
+        var date = (`預約日期：${document.getElementById("myDate").value}`);
+        var discount = (`優惠選項：${document.getElementById("myDiscount").value}`);
+        var remark = (`備註：${document.getElementById("myRemark").value}`);
+        swal(`請確認以下資訊\n${name}\n${mail}\n${phone}\n${order}\n${date}\n${discount}\n${remark}`);
+      }
+
+
+    </script>
+
+</body>
+
+</html>

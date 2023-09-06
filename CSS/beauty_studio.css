@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Dancing+Script&family=Kalam:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Dancing+Script&family=Kalam:wght@300&family=Ranchers&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Dancing+Script&family=Fredericka+the+Great&family=Kalam:wght@300&family=M+PLUS+Rounded+1c:wght@500&family=Ranchers&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Dancing+Script&family=Fredericka+the+Great&family=Kalam:wght@300&family=Ranchers&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Dancing+Script&family=Fredericka+the+Great&family=Kalam:wght@300&family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@500&family=Ranchers&family=Tangerine&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../icon/background.png);
+}
+
+.mainBg {
+    min-height: 100vh;
+}
+
+.bottomTop {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+
+
+
+.myAbout {
+    font-family: 'Fredericka the Great';
+    font-size: 60px;
+}
+
+.myList {
+    font-family: "M PLUS Rounded 1c";
+    color: rgb(118, 171, 153);
+    cursor: default;
+    font-size: 24px;
+}
+
+.myTitle {
+    font-family: '標楷體';
+    font-size: 26px;
+}
+
+.myMenu {
+    font-family: '標楷體';
+    font-size: 20px;
+}
+
+.myMenu:hover {
+    background-color: antiquewhite;
+    cursor: default;
+}
+
+.itd {
+    text-align: center;
+    color: rgb(83, 147, 125);
+    font-size: larger;
+    font-family: 'Kalam', cursive;
+}
+
+.itd_bs {
+    font-size: larger;
+    font-family: 'Ranchers', cursive;
+}
+
+.myNews {
+    font-family: '標楷體';
+    font-size: 20px;
+}
+
+.myNews:hover {
+    cursor: default;
+}
+
+.homeImg {
+    cursor: pointer;
+}
+
+.homeImg:hover {
+    border-radius: 250px;
+    transition-duration: 0.5s;
+
+}
+
+.contentBg:hover {
+    border-radius: 50px;
+    transition-duration: 0.3s;
+
+}
+
+.myOrderList {
+    font-family: "Kosugi Maru";
+    color: rgb(42, 110, 165);
+}
+
+.myOrderList>li {
+    padding: 5px;
+}
+
+.myCheck>input:hover {
+    cursor: pointer;
+}
+
+.myCheck>label:hover {
+    cursor: pointer;
+}
+
+.allFron {
+    font-size: 18px;
+}
+
+.myForm {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(53, 121, 121);
+}
+
+.myA {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.myA:link {
+    color: rgb(44, 79, 104);
+}
